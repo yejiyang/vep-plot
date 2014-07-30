@@ -4,7 +4,8 @@
 
 
 may have some bug here, for determine the ress, the direction of the principal stress
-fortran code
+
++	(fortran code)
 ```fortran
       do ii=1,3
 c      dip(ii)=acos(v(3,ii))/pi
