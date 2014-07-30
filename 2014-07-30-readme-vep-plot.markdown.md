@@ -22,12 +22,13 @@
 		 
 		? 	dd(1),ress(1),resd(1),dd(2),ress(2),resd(2), dd(3),ress(3),resd(3),ttt_s, 其他的几个具体代表啥？ 这个导出的结果用gmt画的话是用psmeca 的  s -c, a, m, q的哪一个啊？ 
 
-
-		*		
+	
 ```fortran
 write(12,1000) 1,lon,lat,u01,u02,u03,u11,u12,u13,u14,u15,u16,dd(1),ress(1),resd(1),dd(2),ress(2),resd(2),dd(3),ress(3),resd(3),ttt_s
 ```
 
 		*	dd是偏应力的三个主轴分量（特征值），ress是应力主轴的方位，resd为倾角，
 
-		*	awk '{if(($1==1)&&(int($2*10/5)==$2*10/5)&&(int($3*10/5)==$3*10/5)) print $2,$3,1,$14-35,$15,0,$17-35,$18,-1,$20-35,$21,$22+20,$2,$3}' $input1 |psmeca -R $projection -Sx0.30 -G0/0/0 -K -O -o-1 -W2 -L -C >>$output
+```bash
+awk '{if(($1==1)&&(int($2*10/5)==$2*10/5)&&(int($3*10/5)==$3*10/5)) print $2,$3,1,$14-35,$15,0,$17-35,$18,-1,$20-35,$21,$22+20,$2,$3}' $input1 |psmeca -R $projection -Sx0.30 -G0/0/0 -K -O -o-1 -W2 -L -C >>$output
+```
