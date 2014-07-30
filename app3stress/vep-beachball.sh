@@ -44,5 +44,8 @@ rm bb.txt
 
 ps2pdf ${psfile} ${title}.pdf
 ps2raster $psfile -A -P -Tg
+mv *.pdf ./output
+mv *.ps ./output
+mv *.png ./output
 #gnome-open ${title}.pdf
 #cp $psfile ~/Dropbox/temp/
