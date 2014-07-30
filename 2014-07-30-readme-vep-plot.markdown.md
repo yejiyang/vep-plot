@@ -18,6 +18,10 @@
 		| u16 | u12 | u14 |
 		| u15 | u14 | u13 |
 		
+		* so for 2D case, its, u11, u12, u16, = $7, $8, $12
+		| u11 | u16 | 
+		| u16 | u12 | 
+		
 ***
 		 
 		? 	dd(1),ress(1),resd(1),dd(2),ress(2),resd(2), dd(3),ress(3),resd(3),ttt_s, 其他的几个具体代表啥？ 这个导出的结果用gmt画的话是用psmeca 的  s -c, a, m, q的哪一个啊？ 
