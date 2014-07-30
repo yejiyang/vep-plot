@@ -24,9 +24,9 @@
 
 
 		*		
-		```fortran
-		write(12,1000) 1,lon,lat,u01,u02,u03,u11,u12,u13,u14,u15,u16,dd(1),ress(1),resd(1),dd(2),ress(2),resd(2),dd(3),ress(3),resd(3),ttt_s
-		```
+```fortran
+write(12,1000) 1,lon,lat,u01,u02,u03,u11,u12,u13,u14,u15,u16,dd(1),ress(1),resd(1),dd(2),ress(2),resd(2),dd(3),ress(3),resd(3),ttt_s
+```
 
 		*	dd是偏应力的三个主轴分量（特征值），ress是应力主轴的方位，resd为倾角，
 
