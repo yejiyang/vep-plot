@@ -28,7 +28,8 @@ else
 # before push, check pull first
 	git pull origin master
 # then do push
-	git add .
+#	'--all', is important, otherwise, default '--ignore-removal' will be used
+	git add --all .
 	git commit -m "$1"
 	git push -u origin master
 fi
