@@ -1,0 +1,6 @@
+Catalog Search Results
+<PRE>
+#YYY/MM/DD HH:mm:SS.ss ET MAG  M    LAT     LON     DEPTH Q  EVID      NPH NGRM
+
+No events were found
+</PRE>

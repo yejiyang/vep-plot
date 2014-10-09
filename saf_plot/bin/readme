@@ -1,0 +1,1 @@
+ifort -O2 -o pp123 pp123.f

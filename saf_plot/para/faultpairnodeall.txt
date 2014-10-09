@@ -1,0 +1,24 @@
+20      
+26      10      saf1		1
+79      40       saf2		2
+77      51      saf3		3
+138     87      saf4		4
+121     93      saf5		5
+118     109     saf6		6
+151     145     saf7		7
+249     208     GF1		8
+239     214     GF2		9
+501     473     TF1	closetosaf	10
+498     477     TF2		11
+491     484     TF3		12
+194     158     SJF1		13
+189     167     SJF2		14
+580     542     pf1up   Elsinore	15
+563     554     pf1down Elsinore	16
+631     611     pf2up		17
+673     652     pf2down		18
+2442    906     ecszup		19
+3372    1732     ecszdown	20
+
+
+

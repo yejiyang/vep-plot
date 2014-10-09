@@ -1,0 +1,27 @@
+#! /bin/sh
+
+#ifort  -o selnodesort selnodesort.f
+#./selnodesort
+ifort -O2 -o pp123 pp123.f
+./pp123 >pp123.log
+#cp vep.res saf716_0_23839.vep.res
+#mv selnode.velo selnode.saf12.Lock101.50k.tl.velo
+
+tar czvf res.tgz res.fl* pp123.log cgrid.txt res_xy.txt
+cp res.tgz res.saf716_5_5284.tgz
+cp res.saf716_5_5284.tgz ../../../results
+#tar czvf res.tgz res.fl*   *.vep.res
+
+cp ../data4_check/data1 ./
+cp ../data4_check/amend.flavia.msh ./
+tar czvf ores.tgz munod munod1 coor0 elem0 data1 amend.flavia.msh
+cp ores.tgz ores.saf716_5_5284.tgz
+cp ores.saf716_5_5284.tgz ../../../results
+
+#rm stop slip grid.txt res.txt
+
+#cp res.tgz ../results/saf716_0_23839.tgz
+#rcp res.tgz jiyang@geo01:/home/jiyang/Dropbox/SAF/model/saf716/saf716_0_23839.tgz
+#rcp res.tgz jiyang@geo01:/home/jiyang/Dropbox/SAF/model/saf12/results/saf12.Lock101.50k.tgz
+#rcp selnode.saf12.Lock101.50k.tl.velo jiyang@geo01:/home/jiyang/Dropbox/SAF/model/saf12/post/.
+#rcp selnode.saf12.1870.bl.velo jiyang@geo01:/home/jiyang/Dropbox/SAF/model/saf12/post/.

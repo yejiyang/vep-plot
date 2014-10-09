@@ -1,0 +1,95 @@
+##	#627_1_7169     saf
+##	#627_1_15001    saf
+##	#627_1_20140     saf
+##	#627_11_10837   saf
+##	#627_11_28622    saf
+##	#627_0_7163     saf.gf
+##	#627_0_15447    saf.gf
+##	#627_0_20880     saf.gf
+##	#627_01_11013   saf.gf
+##	#627_01_29586    saf.gf
+#
+##	#716_1_50000 for Fig3, ref model
+#716_1_50000     saf
+#716_1A_5w     saf.nv
+#716_1A2_5w     saf.nv
+#716_1A3_2w     saf.nv
+#716_1A3_5w     saf.nv
+#716_1A4_2w     saf.nv
+#716_1A4_5w     saf.nv
+#716_0_50000     saf.gf
+#716_01_50000    saf.gf
+##	#716_2_3503     saf.eb
+#716_2_17372    saf.eb
+##	#716_2_28980     saf.eb
+#716_2_50000     saf.eb
+#716_2A_5w     saf.eb
+#716_2A2_5w     saf.eb.nv
+#716_2A3_36w     saf.eb
+#716_2A4_5w     saf.eb.nv
+#716_2A5_5w     saf.eb.nv
+#716_2A6_3w     saf.eb.nv
+#716_2A7_3w     saf.eb.nv
+#716_2A7_5w     saf.eb.nv
+#716_2A8_3w     saf.eb.nv
+#716_2A8_5w     saf.eb.nv
+#716_23_30000    saf.eb
+#716_24_30000    saf.eb
+##	#716_3_3636     saf.gf.eb
+##	#716_3_18254    saf.gf.eb
+#716_3_30404     saf.gf.eb
+#716_3A_5w     saf.gf.eb.nv
+#716_3A2_3w     saf.gf.eb.nv
+#716_3A3_5w     saf.gf.eb.nv
+##	#716_31_14120   saf.gf.eb
+#716_31_22547    saf.gf.eb
+#716_31_50000    saf.gf.eb
+#716_31A_5w    saf.gf.eb.nv
+#
+#716_31A2_3w    saf.gf.eb.nv
+#716_31A3_5w    saf.gf.eb.nv
+##	#716_4_15126    saf.sjf.eb
+##	#716_4_2103     saf.sjf.eb
+#716_4_26807     saf.sjf.eb
+#716_4_50000     saf.sjf.eb
+#716_4A_5w     saf.sjf.eb.nv
+#716_4A2_3w     saf.sjf.eb.nv
+#716_4A3_5w     saf.sjf.eb.nv
+##	#716_5_17369    saf.sjf.eb
+#716_5_26830     saf.sjf.eb
+##	#716_5_5284     saf.sjf.eb
+#716_5_50000     saf.sjf.eb
+#716_5_80000     saf.sjf.eb
+#716_5A_5w     saf.sjf.eb.nv
+#716_5A2_2w     saf.sjf.eb.nv
+#716_5A2_5w     saf.sjf.eb.nv
+#716_5A3_5w     saf.sjf.eb.nv
+##	#716_6_16952    saf.gf.sjf.eb
+#716_6_27303     saf.gf.sjf.eb
+#716_6_50000     saf.gf.sjf.eb
+#716_6A_5w     saf.gf.sjf.eb.nv
+##	#716_6A2_2w     saf.gf.sjf.eb.nv
+#716_6A2_3w     saf.gf.sjf.eb.nv
+#716_6A3_5w     saf.gf.sjf.eb.nv
+##	#716_7_17417    saf.gf.sjf.pf.eb
+#716_7_28177     saf.gf.sjf.pf.eb
+#716_7_50000     saf.gf.sjf.pf.eb
+#716_7A_5w     saf.gf.sjf.pf.eb.nv
+#716_7A2_5w     saf.gf.sjf.pf.eb.nv
+#716_7A3_5w     saf.gf.sjf.pf.eb.nv
+##	#716_8_13841    saf.gf.sjf.pf.tf.eb
+##	#716_8_22583     saf.gf.sjf.pf.tf.eb
+#716_8_43681     saf.gf.sjf.pf.tf.eb
+##	#716_81_19071    saf.gf.sjf.pf.tf.eb
+#716_81_29053    saf.gf.sjf.pf.tf.eb
+#716_82_32339    saf.gf.sjf.pf.tf.eb
+#716_83_30857    saf.gf.sjf.pf.tf.eb
+#716_83A_5w    saf.gf.sjf.pf.tf.eb.nv
+#716_83A2_5w    saf.gf.sjf.pf.tf.eb.nv
+#716_83A3_5w    saf.gf.sjf.pf.tf.eb.nv
+#716_83A4_5w    saf.gf.sjf.pf.tf.eb.nv
+#716_83A5_5w    saf.gf.sjf.pf.tf.eb.nv
+716_83A6_3w    saf.gf.sjf.pf.tf.eb.nv
+#716_84_50000    saf.gf.sjf.pf.tf.eb
+#716_85_50000    saf.gf.sjf.pf.tf.eb
+#716_85A3_4w    saf.gf.sjf.pf.tf.eb.nv

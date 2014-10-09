@@ -1,0 +1,14 @@
+# GMT common arguments shelf
+-B2000/:meters:
+-JM8.39c
+-Jx1i
+-R/0/4/0/4
+-X1.5c
+-x9.5c
+-Y19.0c
+-y-9.5c
+-jx1i
+EOF
+9.5c
+-jM8.39c
+EOF

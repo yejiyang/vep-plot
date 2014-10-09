@@ -1,0 +1,8 @@
+#	cpt file created by: grd2cpt -V -I ./para/scatopo.grd -Cgray.cpt -Z
+#COLOR_MODEL = RGB
+#
+-4745	255	255	255	-10	255	255	255
+-10	255	255	255	4206	153	153	153
+B	255	255	255
+F	153	153	153
+N	128	128	128

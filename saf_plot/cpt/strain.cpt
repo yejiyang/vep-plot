@@ -1,0 +1,9 @@
+#	cpt file created by: makecpt -Cno_green -Qo -T1/1000/1 -D -Z
+#COLOR_MODEL = RGB
+#
+1	32	96	255	10	85	255	255
+10	85	255	255	100	255	191	0
+100	255	191	0	1000	255	0	0
+B	32	96	255
+F	255	0	0
+N	128	128	128
