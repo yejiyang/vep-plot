@@ -48,21 +48,17 @@ input=$line
 #
 #
 #	#if eb and nv, using dash line
-	if echo $j | grep -Fq "eb"; then
-		eb=1;
-	fi
+	if echo $j | grep -Fq "eb"; then eb=1; fi
 	if echo $j | grep -Fq "nv"; then nv=1; fi;
 
 #	# the other faults plot solid line
 #	# including, saf,sjf,gf,pf,tf
 	rm $i.fault.gmt
-	if echo $j | grep -Fq "saf"; then
-		cat ${para_path}saf.gmt >>$i.fault.gmt;
-	fi 
+	if echo $j | grep -Fq "saf"; then cat ${para_path}saf.gmt >>$i.fault.gmt; fi 
 	if echo $j | grep -Fq "sjf"; then cat ${para_path}sjf.gmt >>$i.fault.gmt; fi; 
-	if echo $j | grep -Fq "gf"; then cat ${para_path}gf.gmt >>$i.fault.gmt; fi; 
-	if echo $j | grep -Fq "pf"; then cat ${para_path}pf.gmt >>$i.fault.gmt; fi; 
-	if echo $j | grep -Fq "tf"; then cat ${para_path}tf.gmt >>$i.fault.gmt; fi; 		
+	if echo $j | grep -Fq "gf";  then cat ${para_path}gf.gmt  >>$i.fault.gmt; fi; 
+	if echo $j | grep -Fq "pf";  then cat ${para_path}pf.gmt  >>$i.fault.gmt; fi; 
+	if echo $j | grep -Fq "tf";  then cat ${para_path}tf.gmt > >$i.fault.gmt; fi; 		
 	cp $i.fault.gmt ${para_path}
 #	echo "eb= $eb"
 #	echo "nv= $nv"
@@ -77,7 +73,7 @@ input=$line
 	s_mkdir res.saf$i
 	mv  res.fl* pp123saf$i.log  res_xy.txt ./res.saf$i
 	cp cgrid.m.txt ./res.saf$i/.
-	rm -f amend.flavia.msh coor0 data1 elem0 munod munod1
+	rm  amend.flavia.msh coor0 data1 elem0 munod munod1
 #
 #
 #----------2 prepare the plot data--------------
@@ -126,6 +122,6 @@ done
 done<templist
 
 echo $i $eb $nv > toP
-#mv toP ./res.saf$i/
+cp  toP ./res.saf$i/
 
 rm templist

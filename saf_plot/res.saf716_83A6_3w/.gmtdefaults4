@@ -1,5 +1,5 @@
 #
-#	GMT-SYSTEM 4.5.12 [64-bit] Defaults file
+#	GMT-SYSTEM 4.5.9 [64-bit] Defaults file
 #
 #-------- Plot Media Parameters -------------
 PAGE_COLOR		= white
@@ -50,7 +50,7 @@ UNIX_TIME_FORMAT	= %Y %b %d %H:%M:%S
 #-------- Color System Parameters -----------
 COLOR_BACKGROUND	= black
 COLOR_FOREGROUND	= white
-COLOR_NAN		= 128
+COLOR_NAN		= white
 COLOR_IMAGE		= adobe
 COLOR_MODEL		= rgb
 HSV_MIN_SATURATION	= 1
