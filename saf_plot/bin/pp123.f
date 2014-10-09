@@ -64,8 +64,9 @@ c      write(*,*)knode
 
 c**fault slip start
 c     read the fault node pairs, and get the fault slip output
-      open(10,file='/home/jiyang/vepmpich2-June302013/results/para/
-     +faultpairnode.txt',status='old')
+c      open(10,file='/home/jiyang/vepmpich2-June302013/results/para/
+c     +faultpairnode.txt',status='old')
+      open(10,file='para/faultpairnode.txt',status='old')
       
       read(10,*) nfpn
          read(10,*) (nleft0(i),nright0(i),i=1,nfpn)

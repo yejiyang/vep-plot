@@ -5,14 +5,20 @@ title=$1
 efffault=$2
 eb=$3
 nv=$4
+m=$5
 
-cpt_path=/home/jiyang/vepmpich2-June302013/results/cpt/
-bin_path=/home/jiyang/vepmpich2-June302013/results/bin/
-para_path=/home/jiyang/vepmpich2-June302013/results/para/
-eq_path=/home/jiyang/vepmpich2-June302013/results/eq/
-ores_path=/home/jiyang/vepmpich2-June302013/results/ores/
+#cpt_path=/home/jiyang/vepmpich2-June302013/results/cpt/
+#bin_path=/home/jiyang/vepmpich2-June302013/results/bin/
+#para_path=/home/jiyang/vepmpich2-June302013/results/para/
+#eq_path=/home/jiyang/vepmpich2-June302013/results/eq/
+#ores_path=/home/jiyang/vepmpich2-June302013/results/ores/
+cpt_path=../cpt/
+bin_path=../bin/
+para_path=../para/
+eq_path=../eq/
+ores_path=../ores/
 
-input=cgrid.txt
+input=cgrid.$m.txt
 #prepare the data
 
 psfile=${title}.velo.ps #${psfile}
@@ -60,7 +66,7 @@ if [ "$eb" = "1" ]; then
 fi
 if [ "$nv" = "1" ]; then
         psxy ${para_path}nv.gmt $proj $range -W1.3p,- -m -O $V -K  >>$psfile
-        echo "nv = $nv **********************************************"
+#        echo "nv = $nv **********************************************"
 fi
 ##for eb
 psclip -C -O -K >>$psfile
