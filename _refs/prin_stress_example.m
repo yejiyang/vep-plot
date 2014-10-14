@@ -1,4 +1,4 @@
-function prin_stress_example
+%function prin_stress_example
 
 sigmax=12000; sigmay=15000; tauxy=8000;
 original_stress=[sigmax tauxy; tauxy sigmay];
@@ -9,6 +9,7 @@ principal_stress = Principal %Principal stresses
 Value = Vectors (2,1)/Vectors (1,1); % Slope of eigenvector is a ratio of its (y/x)-components
 RadianOrientation = atan(Value);
 PrincipalOrientation = RadianOrientation * (180/pi) %Principal stress orientation in degrees
+atand(Value)
 
 ShearTheta = RadianOrientation - (pi/4);
 MaxShearOrientation = ShearTheta*(180/pi) %Maximum shear stress orientation in degrees

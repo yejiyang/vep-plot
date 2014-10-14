@@ -1,0 +1,268 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>principal_2d</title><meta name="generator" content="MATLAB 7.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-10-14"><meta name="DC.source" content="principal_2d.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#3">about this script</a></li><li><a href="#4">test data</a></li><li><a href="#5">using eigenvalues and eigenvectors</a></li><li><a href="#6">to check the results</a></li><li><a href="#7">end of function</a></li></ul></div><pre class="codeinput"><span class="keyword">function</span> [output] = principal_2d(sij)
+</pre><pre class="codeinput"><span class="comment">%function [p,sita_p,max_shear] = principal_2d(sij)</span>
+</pre><h2>about this script<a name="3"></a></h2><p>Author: Jiyang Ye (<a href="mailto:yejiyang@gmail.com">yejiyang@gmail.com</a>) initial date: Jul 29, 2014 revised date: Oct 14, 2014 this program aim to calculate 2-d principal stress, same with strain, input:  the 2-d stress, sij = [s11 s12; s21 s22], s12 = s21; output: including, 4 float numbers output: output[1 2]: the principal stress I &amp; II output: output[3]: sitaP, the direction of max principal stress counter-clockwise           from x direction. output: output[4]: the maxshear stress caution:  all the unit of the angle are degrees!</p><pre class="codeinput"><span class="comment">%clear; clc;</span>
+</pre><h2>test data<a name="4"></a></h2><p>[output]=   principal_2d(sij)</p><p>test cases, compare the results with <a href="http://www.efunda.com/formulae/solid_mechanics/mat_mechanics/calc_principal_stress.cfm#calc">http://www.efunda.com/formulae/solid_mechanics/mat_mechanics/calc_principal_stress.cfm#calc</a>     % max 0.611, deg 20.3</p><pre class="codeinput"><span class="comment">%sij = [0.5 0.3;   0.3 -0.2];</span>
+<span class="comment">%</span>
+<span class="comment">%     %max 70, deg 26.5651</span>
+<span class="comment">%sij = [50 40; 40 -10 ];</span>
+<span class="comment">%</span>
+<span class="comment">%         %max 70, deg 63.4 , ok</span>
+<span class="comment">%sij = [-10 40;    40 50 ];</span>
+<span class="comment">%</span>
+<span class="comment">%     % max 0, deg -45; min -8, deg 45, ok</span>
+<span class="comment">%sij = [-4 -4 ;    -4 -4];</span>
+<span class="comment">%</span>
+<span class="comment">% % max 11, deg 18.4 , ok</span>
+<span class="comment">%sij = [10 3;  3 2];</span>
+<span class="comment">%</span>
+<span class="comment">%     % max 1490, deg -13.2, max shear 785, directon, sita_s1, 31.8, sita-s2, -58.2 ok</span>
+<span class="comment">%sij = [1406 -350; -350 0];</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">%         %max 4.5, deg 40, ok</span>
+<span class="comment">%sij = [2 3;   3 1];</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">%     %max 61.1, deg 20.3, ok</span>
+<span class="comment">%sij = [50 30; 30 -20];</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">%     %max 1.65, deg 32.9</span>
+<span class="comment">%sij = [1 1;   1 0.1];</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+</pre><h2>using eigenvalues and eigenvectors<a name="5"></a></h2><p>using eig() or eigs(), can quickly get the values original_stress</p><pre class="codeinput"> sij = [12000 8000; 8000 15000];
+<span class="comment">%</span>
+<span class="comment">% v: vectors; p: principal stress or strain</span>
+[v, p] = eigs(sij); <span class="comment">%Eigen value function in MATLAB, using eigs not eig</span>
+
+<span class="comment">% Get the principal stress direction from eigenvector.</span>
+<span class="comment">% Here, we got the I1 (max principal stress) direction, counter-clockwise</span>
+<span class="comment">% rotate 45 from x xias.</span>
+temp = v(2,1) / v(1,1); <span class="comment">% Slope of eigenvector is a ratio of its (y/x)-components</span>
+<span class="comment">%sita_p = atan(temp);</span>
+<span class="comment">%sita_p = sita_p * (180/pi); %Principal stress orientation in degrees</span>
+sita_p  = atand(temp);
+
+<span class="comment">% max_shear: max shear stress or strain</span>
+max_shear = (p(1,1) - p(2,2))/2;
+<span class="comment">% Max shear stress orientation in degrees, counter-clockwise rotate 45 from principal stress I</span>
+<span class="comment">%sita_I  = sita_p + 45;</span>
+<span class="comment">% Max shear stress orientation in degrees, clockwise rotate 45 from principal stress II</span>
+<span class="comment">%sita_II = sita_p - 45;</span>
+
+output = [p(1,1), p(2,2), sita_p, max_shear];
+</pre><h2>to check the results<a name="6"></a></h2><p>here, using the equation, we first calculate the principal direction, but don't know whether it is max or min direction; then, construct the transformation function to check the direction for        max principal stress</p><pre>refs http://www.continuummechanics.org/cm/principalstress.html</pre><pre class="codeinput"><span class="comment">%sitaP = atand(2*sij(1,2)/(sij(1,1)-sij(2,2)))/2;</span>
+<span class="comment">%</span>
+<span class="comment">% % get the transformation matrix</span>
+<span class="comment">%T = [cosd(sitaP) sind(sitaP);</span>
+<span class="comment">%     -sind(sitaP) cosd(sitaP)];</span>
+<span class="comment">%</span>
+<span class="comment">% % get the initial principal stress, using the transformation matrix</span>
+<span class="comment">%pij_init = T*sij*T';</span>
+<span class="comment">%</span>
+<span class="comment">% % reorder the initial principal stress, so pij(1,1) = max_pincipal_stress</span>
+<span class="comment">% % if pij_init(1,1) is not the max, then swith with the pij_init(2,2)</span>
+<span class="comment">% % also swith the principal direction angle</span>
+<span class="comment">%if pij_init(1,1) &lt; pij_init(2,2)</span>
+<span class="comment">%     pij=zeros(2);</span>
+<span class="comment">%     pij(1,1)=pij_init(2,2);</span>
+<span class="comment">%     pij(2,2) = pij_init(1,1);</span>
+<span class="comment">%</span>
+<span class="comment">%     sitaP_max = sitaP + 90;</span>
+<span class="comment">% % else, nothing change</span>
+<span class="comment">%else</span>
+<span class="comment">%     pij = pij_init;</span>
+<span class="comment">%     sitaP_max = sitaP;</span>
+<span class="comment">%</span>
+<span class="comment">%end</span>
+</pre><h2>end of function<a name="7"></a></h2><pre class="codeinput"><span class="keyword">end</span>
+</pre><pre class="codeoutput">
+ans =
+
+   1.0e+04 *
+
+    2.1639    0.5361    0.0050    0.8139
+
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.14<br></p></div><!--
+##### SOURCE BEGIN #####
+function [output] = principal_2d(sij)
+%function [p,sita_p,max_shear] = principal_2d(sij)
+
+%% about this script
+% Author: Jiyang Ye (yejiyang@gmail.com)
+% initial date: Jul 29, 2014
+% revised date: Oct 14, 2014
+% this program aim to calculate 2-d principal stress, same with strain, 
+% input:  the 2-d stress, sij = [s11 s12; s21 s22], s12 = s21; 
+% output: including, 4 float numbers
+% output: output[1 2]: the principal stress I & II
+% output: output[3]: sitaP, the direction of max principal stress counter-clockwise 
+%           from x direction.
+% output: output[4]: the maxshear stress
+% caution:  all the unit of the angle are degrees!
+%clear; clc; 
+
+%% test data
+% 
+% [output]=   principal_2d(sij)
+%
+% test cases, compare the results with
+% http://www.efunda.com/formulae/solid_mechanics/mat_mechanics/calc_principal_stress.cfm#calc
+%     % max 0.611, deg 20.3    
+%sij = [0.5 0.3;   0.3 -0.2];
+% 
+%     %max 70, deg 26.5651
+%sij = [50 40; 40 -10 ];
+%     
+%         %max 70, deg 63.4 , ok 
+%sij = [-10 40;    40 50 ];
+%     
+%     % max 0, deg -45; min -8, deg 45, ok
+%sij = [-4 -4 ;    -4 -4];
+%     
+% % max 11, deg 18.4 , ok       
+%sij = [10 3;  3 2];
+% 
+%     % max 1490, deg -13.2, max shear 785, directon, sita_s1, 31.8, sita-s2, -58.2 ok
+%sij = [1406 -350; -350 0];
+% 
+%     
+%         %max 4.5, deg 40, ok    
+%sij = [2 3;   3 1];
+%     
+%         
+%     %max 61.1, deg 20.3, ok
+%sij = [50 30; 30 -20]; 
+%     
+% 
+%     %max 1.65, deg 32.9
+%sij = [1 1;   1 0.1];
+% 
+%
+
+
+%% using eigenvalues and eigenvectors
+% using eig() or eigs(), can quickly get the values
+% original_stress
+ sij = [12000 8000; 8000 15000];
+%
+% v: vectors; p: principal stress or strain
+[v, p] = eigs(sij); %Eigen value function in MATLAB, using eigs not eig
+
+% Get the principal stress direction from eigenvector.
+% Here, we got the I1 (max principal stress) direction, counter-clockwise
+% rotate 45 from x xias.
+temp = v(2,1) / v(1,1); % Slope of eigenvector is a ratio of its (y/x)-components
+%sita_p = atan(temp);
+%sita_p = sita_p * (180/pi); %Principal stress orientation in degrees
+sita_p  = atand(temp);
+
+% max_shear: max shear stress or strain
+max_shear = (p(1,1) - p(2,2))/2;
+% Max shear stress orientation in degrees, counter-clockwise rotate 45 from principal stress I
+%sita_I  = sita_p + 45; 
+% Max shear stress orientation in degrees, clockwise rotate 45 from principal stress II
+%sita_II = sita_p - 45;
+
+output = [p(1,1), p(2,2), sita_p, max_shear];
+
+
+
+%% to check the results
+% here, using the equation, we first calculate the principal direction,
+% but don't know whether it is max or min direction;
+% then, construct the transformation function to check the direction for
+%        max principal stress
+% 
+%  refs http://www.continuummechanics.org/cm/principalstress.html
+%sitaP = atand(2*sij(1,2)/(sij(1,1)-sij(2,2)))/2;
+% 
+% % get the transformation matrix
+%T = [cosd(sitaP) sind(sitaP); 
+%     -sind(sitaP) cosd(sitaP)];
+% 
+% % get the initial principal stress, using the transformation matrix
+%pij_init = T*sij*T';
+% 
+% % reorder the initial principal stress, so pij(1,1) = max_pincipal_stress
+% % if pij_init(1,1) is not the max, then swith with the pij_init(2,2)
+% % also swith the principal direction angle
+%if pij_init(1,1) < pij_init(2,2)
+%     pij=zeros(2);
+%     pij(1,1)=pij_init(2,2);
+%     pij(2,2) = pij_init(1,1);
+%     
+%     sitaP_max = sitaP + 90;
+% % else, nothing change
+%else 
+%     pij = pij_init;
+%     sitaP_max = sitaP;
+%     
+%end
+
+%% end of function
+end
+
+
+
+##### SOURCE END #####
+--></body></html>
