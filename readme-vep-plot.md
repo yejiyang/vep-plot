@@ -100,7 +100,7 @@ psmeca cmt1 -R236/250/33/43 -Jm0.40i  -C -O -K -Sd0.15i/1 -G255/0/0 >> cmt1.ps
 
 ```fortran
 
-open(1,file='cmt',status='old')
+			open(1,file='cmt',status='old')
             do i=1,np
             read(1,*)(s(i,j),j=1,6),idx(i),av(i),ta(i)
             enddo
