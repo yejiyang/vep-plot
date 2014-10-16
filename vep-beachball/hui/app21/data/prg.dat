@@ -1,0 +1,9 @@
+        -0.0e4                          stif1
+        -0.0e7                          stif2
+        8.75e10  0.25     1.0e25          pe1,pv1,yita1
+        8.75e10  0.25     1.0e25          pe2,pv2,yita2
+        8.75e10  0.25     1.0e25          pe3,pv3,yita3
+        8.75e10  0.25     2.0e20          pe1,pv1,yita1
+        8.75e10  0.25     2.0e20          pe2,pv2,yita2
+        8.75e10  0.25     2.0e20          pe3,pv3,yita3
+

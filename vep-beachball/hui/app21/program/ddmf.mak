@@ -1,0 +1,1 @@
+FOBJS =  ddm.o ddmm.o ddms.o azsendpart.o azrecvpart.o msazrecvpart.o start.o nzdmbsdiag.o bft.o mbft.o eddm.o dmbs2dmsr.o azsolv.o uddm.o nzrecvdip.o esddm.o nzrecvstr.o ddmsub.o bound.o intcommu.o realcommu.o charcommu.o inimpi.o timer.o incore.o huw6m.o hsw6m.o hugq4g2.o hulq4g2.o getdfu.o getdfs.o bound1.o fepglib.o stres.o plas.o suc8g2.o ssc8g2.o

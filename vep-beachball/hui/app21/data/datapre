@@ -1,0 +1,46 @@
+#This program is based on Zhanghuai's pre-process
+#but the mesh file is created by Gid7.2 
+#the mesh.cor mesh.elm bd.cor bd.elm are all created by the program  
+
+#! /bin/csh
+
+rm all-boundaries  boundaries 
+
+ifort -O2 -o amend amend.f
+./amend
+echo amend finished ...
+echo
+
+ifort -O2 -o frame frame.for
+./frame
+echo frame finished ...
+echo
+
+ifort -O2 -o bdseg bdseg.for
+./bdseg
+echo bdseg finished ...
+echo 
+
+ifort -O2 -o prgla prgla.for
+./prgla
+echo prgla finished ...
+echo
+
+ifort -O2 -o prg prg.f
+./prg
+echo prg finished ...
+echo
+
+ifort -O2 -o forgid forgid.f
+./forgid
+echo forgid finished ...
+echo
+
+cp disp0 disp1
+tar czvf data0.tgz *0 partition.dat disp1
+tar czvf part0.tgz partition.fl*
+rm partition.fl*
+
+cp data0.tgz ../compute
+cp data0.tgz ../scompute
+

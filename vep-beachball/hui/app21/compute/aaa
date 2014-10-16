@@ -1,0 +1,8 @@
+ dt=   5.00571428571429     
+       knode       nelem       nlayer
+        8673        7038           7
+ 
+ ... Recalculate strain rates ...
+ 
+ ... Sample the grid ...
+agrid11.txt

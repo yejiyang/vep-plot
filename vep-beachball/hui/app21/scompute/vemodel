@@ -1,0 +1,14 @@
+#! /bin/sh
+
+tar xzvf data0.tgz
+./umcazpartition
+
+tar czvf part1.tgz partition.fl*
+rm stop disp-vect* curve* part?.fl* part??.fl*
+
+#qsub evp1.pbs
+#bsub -n 12 -a mvapich "mpirun.lsf ./ddmliq1 >fout"
+#mpirun -np 12 ./ddmliq1 > fout
+
+nohup mpirun -np 12 -machinefile hosts ./ddmliq21 > fout 2>&1 &
+

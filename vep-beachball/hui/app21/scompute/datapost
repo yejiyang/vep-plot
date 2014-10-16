@@ -1,0 +1,13 @@
+#! /bin/csh
+
+ifort -O2 -o p1234 p1234.f ../lib/liblapack.a ../lib/librefblas.a 
+./p1234
+
+#tar czvf res.tgz res.fl* slip grid.txt res.txt
+mv grid.txt sagrid21.txt
+tar czvf res.tgz sagrid21.txt 
+
+#rm stop slip sagrid21.txt res.txt
+
+#cp res.tgz ../../results/sres21.tgz
+cp res.tgz sares21.tgz

@@ -1,0 +1,51 @@
+BeginZE /home/jiyang/ss/hui-ss-/app21/compute/res.flavia.vv
+   x -23.5505905151367188 23.5505905151367188
+   y 17.3205089569091797 -17.3205089569091797
+   z -51.9615249633789062 51.9615249633789062
+   e 17.3205089569091797
+   v 0.41750949531360243 -0.203505172260842859 -0.152603699942769677
+   r 0.872343726377304174
+   m 0.87059551477432251 0.0963150784373283386 -0.482479900121688843 0 -0.436176449060440063 0.604795873165130615 -0.666312277317047119 0 0.227625936269760132 0.790534853935241699 0.568542957305908203 0 0 0 0 1
+   c 0 0 0
+   pd 0
+   pno 0
+   pfo 0
+   pf 4
+   pv 0
+   NowUse 2
+   DrawingType 3
+   LightVector 90 90 150 0
+   OGLShadow(UseShadows) 0
+   OGLShadow(RenderMode) RenderFast
+   OGLShadow(ShadowBias) 0
+   OGLShadow(AmbientShadows) 0
+   OGLShadow(UseFBO) 0
+   OGLShadow(FBOSize) 0
+   OGLShadow(DimmedLightFactor) 0
+   OGLStereo(UseStereo) 0
+   OGLStereo(RelativeEyeDistance) 1
+   OGLStereo(FlipEyes) 0
+   OGLStereo(StereoMode) AnaglyphColors
+   OGLStereo(EyeDistance) 0.075
+   OGLStereo(LeftEyeDistance) 1 0 0 1
+   OGLStereo(RightEyeDistance) 0 1 1 1
+EndZE /home/jiyang/ss/hui-ss-/app21/compute/res.flavia.vv
+
+BeginMirror
+   Mirror 0 Angle 0.0 AngleFake -15.0 SizeFactor 2.0 HeightOffset 0.25 Color #d9e5f24d Backlight Off EdgeStyle No Type Scene DrawMode Mirror
+EndMirror
+
+BeginInfo
+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
+EndInfo
+
+BeginPostState
+BeginSingleMesh
+  Num meshes: 0
+  Num sets: 0
+  Num cuts: 0
+EndSingleMesh
+  Post_Prefs_Vector_Size: 0 32 32 32
+  ResultView: {Id 15} {No results} {} {} {} {} 4 0
+EndPostState
+
