@@ -92,7 +92,32 @@ c      write(*,*) ii,ress(ii),resd(ii),acos(0.5d0)
 
 ## 2. From Yang
 
-```matlab
+```bash
+
+psmeca cmt1 -R236/250/33/43 -Jm0.40i  -C -O -K -Sd0.15i/1 -G255/0/0 >> cmt1.ps
+
+```
+
+```fortran
+
+open(1,file='cmt',status='old')
+            do i=1,np
+            read(1,*)(s(i,j),j=1,6),idx(i),av(i),ta(i)
+            enddo
+            close (1)
+
+            open(2,file='cmt1')
+            do i=1,kp
+            k=npk(i)
+            kk=k+iiz*n0
+    c        write(2,9)x(k),y(k),-z(k),(s(kk,j),j=1,6),idx(kk),x(k),y(k)
+            write(2,9)x(k),y(k),5.,(s(kk,j),j=1,6),idx(kk),x(k),y(k)
+            enddo
+            close (2)
+
+```
+
+```fortran
 
 	OPEN(1,FILE='tmp')
     OPEN(2,FILE='cmt')
