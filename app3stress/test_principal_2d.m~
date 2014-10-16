@@ -34,8 +34,8 @@
    0.0000000000000000     
    0.0000000000000000     
    21.757167910720103]
-str = [sij(1) sij(6) sij(5);sij(6) sij(2) sij(4); sij(5) sij(4) sij(3)]
+str = [sij(1) sij(6) sij(5);sij(6) sij(2) sij(4); ]
      
 %         %max 70, deg 63.4 , ok 
  %sij = [-10 40; 40 50 ];
- % [output]=   principal_2d(sij)
+  [output]=   principal_2d(sij)
