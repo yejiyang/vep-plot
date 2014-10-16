@@ -38,6 +38,58 @@ write(12,1000) 1,lon,lat,u01,u02,u03,u11,u12,u13,u14,u15,u16,dd(1),ress(1),resd(
 awk '{if(($1==1)&&(int($2*10/5)==$2*10/5)&&(int($3*10/5)==$3*10/5)) print $2,$3,1,$14-35,$15,0,$17-35,$18,-1,$20-35,$21,$22+20,$2,$3}' $input1 |psmeca -R $projection -Sx0.30 -G0/0/0 -K -O -o-1 -W2 -L -C >>$output
 ```
 
+```fortran
+
+c-----------------------------------------------------------------
+c.....Principal stress
+c-----------------------------------------------------------------
+      ttt_s=(u11+u12+u13)/3.d0
+      uu11=u11-ttt_s
+      uu12=u12-ttt_s
+      uu13=u13-ttt_s
+      
+      Nn=3
+      do ii=1,Nn
+      do jj=1,Nn
+      aa(ii,jj)=0.
+      enddo
+      enddo
+      aa(1,1)=uu11
+      aa(1,2)=u16
+      aa(1,3)=u15
+      aa(2,1)=aa(1,2)
+      aa(2,2)=uu12
+      aa(2,3)=u14
+      aa(3,1)=aa(1,3)
+      aa(3,2)=aa(2,3)
+      aa(3,3)=uu13
+
+      call jacobi(aa,NP,NP,dd,vv,nrot)
+      call eigsrt(dd,vv,NP,NP)
+
+      do ii=1,3
+c      dip(ii)=acos(v(3,ii))/pi
+      resd(ii)=abs(90-abs(acos(vv(3,ii))/pi))
+      if (abs(vv(2,ii)) .lt. 1.0e-3) then
+      ress(ii)=90.
+      else
+      ress(ii)=atan(vv(1,ii)/vv(2,ii))/pi
+      endif
+c      ress(ii)=ress(ii)+alpha/pi
+      ress(ii)=ress(ii)
+      
+c      write(*,*) ii,ress(ii),resd(ii),acos(0.5d0)
+      enddo
+
+      ttt_s=sqrt(u11*u11+u12*u12+2*u16*u16)
+      ttt_s=log(abs(ttt_s))/log(10.d0)
+
+      write(12,1000) 1,lon,lat,u01,u02,u03,u11,u12,u13,u14,u15,u16,
+     +  dd(1),ress(1),resd(1),dd(2),ress(2),resd(2),
+     +  dd(3),ress(3),resd(3),ttt_s
+       
+```
+
 ## 2. From Yang
 
 ```matlab
