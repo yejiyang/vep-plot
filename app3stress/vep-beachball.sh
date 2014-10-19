@@ -27,21 +27,25 @@ awk '{if(($1==1)&& int(($2+5000)*10/100000)==(($2+5000)*10/100000) && int($3*10/
 ###	print $2,$3,int($2*100/5), $2*100/5,  int(($3*1000)/50), $3*1000/50;
 ###	}' $input > bb.txt
 
-psmeca bb.txt  -R -J -Sx0.09i -Ggrey -Ewhite  -O  -W2  -C -V>>$psfile
+psmeca bb.txt  -R -J -Sx0.09i -Ggrey -Ewhite  -O  -W2  -C -V -K>>$psfile
 #psmeca bb.txt  -R -J -Sx0.60 -G0/0/0 -K -O -o-1 -W2 -L -C >>$psfile
 
+awk '{if(int(($1+5000)*10/100000)==(($1+5000)*10/100000) && int($2*10/100000)==($2*10/100000))  print $1/1000,$2/1000,$3,$4,$5,$6,$7,$8,$9,$10,$11/1000,$12/1000+5}' beachball.txt > yang.txt
 
-psbasemap ${range} ${proj} $ticks -X3.5c -Y3.0c -P -V -K > $psfile1
-#plot the faults
-psxy ./para/ss3.fault.gmt  $proj $range -W9/0/0/0 -m -O -V -K>>$psfile1
-psxy ./para/profile.gmt  $proj $range -W0.1p,- -m -O -V -K  >>$psfile1
-awk '{if(int(($1+5000)*10/100000)==(($1+5000)*10/100000) && int($2*10/100000)==($2*10/100000))  print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12}' beachball.txt > yang.txt
+psmeca yang.txt -R  -J  -C -O -V  -Sd0.15i/1 -G255/0/0 >> $psfile
 
-psmeca yang.txt -R  -J  -C -O  -Sd0.15i/1 -G255/0/0 >> $psfile1
+#
+#psbasemap ${range} ${proj} $ticks -X3.5c -Y3.0c -P -V -K > $psfile1
+##plot the faults
+#psxy ./para/ss3.fault.gmt  $proj $range -W9/0/0/0 -m -O -V -K>>$psfile1
+#psxy ./para/profile.gmt  $proj $range -W0.1p,- -m -O -V -K  >>$psfile1
+#awk '{if(int(($1+5000)*10/100000)==(($1+5000)*10/100000) && int($2*10/100000)==($2*10/100000))  print $1/1000,$2/1000,$3,$4,$5,$6,$7,$8,$9,$10,$11/1000,$12/1000}' beachball.txt > yang.txt
+#
+#psmeca yang.txt -R  -J  -C -O -V  -Sd0.15i/1 -G255/0/0 >> $psfile1
 
 ### clean the trash
 rm bb.txt
 
 gnome-open ${title}.ps
-gnome-open $psfile1
+#gnome-open $psfile1
 #mv *.ps ./output

@@ -383,6 +383,7 @@ c
       dimension nqudr(5,1000000),coor(2,100000)
       dimension u0(3,1000000),u1(6,1000000)
       dimension xxd(4),yyd(4),zzd(4)   
+c       add by jiyang
       dimension s(6),bb(6)
       
       PARAMETER(NP=3)
@@ -413,6 +414,7 @@ c
 
       
       open(12,file='grid.txt',status='unknown',form='formatted')
+c       add by jiyang
       open(122,file='beachball.txt',status='unknown',form='formatted')
       
       do lon=xx0,xx1,step
@@ -746,6 +748,7 @@ c      write(*,*) ii,ress(ii),resd(ii),acos(0.5d0)
      +  dd(1),ress(1),resd(1),dd(2),ress(2),resd(2),
      +  dd(3),ress(3),resd(3),ttt_s
 
+c       add by jiyang
       s(1)=u11
       s(2)=u12
       s(3)=u13
@@ -765,6 +768,8 @@ c       write(2,9)x(k),y(k),5.,(s(kk,j),j=1,6),idx(kk),x(k),y(k)
       enddo
       enddo
       close(12)
+c       add by jiyang
+      close(122)
 
 c       1000  format(i9,5f13.5,20es15.5)
 1000  format(i9, 2f13.2, 3f13.5, 20es15.5)
