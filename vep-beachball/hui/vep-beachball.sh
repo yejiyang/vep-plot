@@ -23,21 +23,29 @@ awk '{if(($1==1)&&(int($2*100/5)==$2*100/5)&&(int($3*1000/50)==($3*1000/50)))
 	else
 	print $2,$3,int($2*100/5), $2*100/5,  int(($3*1000)/50), $3*1000/50;
 	}' $input > bb.txt
-psmeca bb.txt  -R -J -Sx0.09i -Gblack -Ewhite  -O  -W2  -C >>$psfile
+psmeca bb.txt  -R -J -Sx0.09i -Gblack -Ewhite -K  -O  -W2  -C >>$psfile
 #psmeca bb.txt  -R -J -Sx0.60 -G0/0/0 -K -O -o-1 -W2 -L -C >>$psfile
 
-
-psbasemap ${range} ${proj} $ticks -X3.5c -Y3.0c -P -V -K > yang.ps
 awk '{if((int($1*100/5)==$1*100/5)&&(int($2*1000/50)==($2*1000/50)))  
-	print $1, $2, $3, $4, $5, $6, $7, $8, $9,$10,$11,$12 ;
+	print $1, $2, $3, $4, $5, $6, $7, $8, $9,$10,$11,$12-0.015 ;
 	else
 	print $2,$3,int($2*100/5), $2*100/5,  int(($3*1000)/50), $3*1000/50;
 	}' beachball.txt >  yang.txt
 
-psmeca yang.txt -R  -J  -C -O  -Sd0.15i/1 -G255/0/0 >> yang.ps
+psmeca yang.txt -R  -J  -C -O  -Sd0.15i/1 -Gred >> $psfile
+
+
+#psbasemap ${range} ${proj} $ticks -X3.5c -Y3.0c -P -V -K > yang.ps
+#awk '{if((int($1*100/5)==$1*100/5)&&(int($2*1000/50)==($2*1000/50)))  
+#	print $1, $2, $3, $4, $5, $6, $7, $8, $9,$10,$11,$12 ;
+#	else
+#	print $2,$3,int($2*100/5), $2*100/5,  int(($3*1000)/50), $3*1000/50;
+#	}' beachball.txt >  yang.txt
+#
+#psmeca yang.txt -R  -J  -C -O  -Sd0.15i/1 -G255/0/0 >> yang.ps
 
 #ps2pdf ${psfile} ${title}.pdf
 #ps2raster $psfile -A -P -Tg
-gnome-open ${title}.pdf
-gnome-open yang.ps
+gnome-open ${title}.ps
+#gnome-open yang.ps
 #cp $psfile ~/Dropbox/temp/
