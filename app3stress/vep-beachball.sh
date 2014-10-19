@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# about beachball.txt  
+# this file includes the data to plot beachball, calculated from Yang's method.
+# the original file is from '/home/jiyang/opensource/vep-plot/app3stress/ori_results/app32', calculated by 'p12345.f'
+
 input=./input/sagrid.32.txt
 #input=./ores.$1/sagrid.$1.txt
 #prepare the data

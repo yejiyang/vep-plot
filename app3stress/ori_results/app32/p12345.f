@@ -1,6 +1,7 @@
 c      this program deal with the results data-geography cordination
 c      creat the selected data files, the data is on surface, 
 c      upper crust and lower crust ...
+c       including both Hui and Yang's method to plot beach ball
 
       program gidpost
       implicit real*8 (a-h,l,o-z)
