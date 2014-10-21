@@ -1,4 +1,5 @@
 # README for app3stress, including beachball and 2-D principal stress direction plot
+a sucessful example, see ./ok_app31/
 
 ## 1. Beach ball plot
 
@@ -28,5 +29,15 @@ The plot bash file, ./vep-beachball.sh.
 
 Check the function principal_2d.m and test_principal_2d.m
 
-Plot file: to develop
+Plot file: ./vep-beachball.sh
+```bash
+	# about the direction of 2D principal stress
+	# our matlab output, extension--positive, compression--negative, but the sita equals to I1 counter-clockwise to x-axis.
+ 	# in gmt, psvelo, -Sx option, extension and compression definition the same. But the angle defition is different. 
+	# the angle in gmt, is azimuth of II2 in degrees CW (clockwise) from North.
+	# So we need transform the matlab output sita to GMT angle. I1=sita, I2=sita+90, angle=90-sita=90-sita-90=-sita, this's why -$9
+	awk '{if(int(($2+5)*10/100)==(($2+5)*10/100) && int($3*10/100)==($3*10/100))  print $2,$3,$7,$8,-$9}' $inputprinstr > prin.txt
+	# -A default -A0.03/0.12/0.09
+	psvelo prin.txt -A0.01/0.6/0.1 -W0.25p,blue  -R  -J   -O -V  -Sx0.06  -K>> $psfile
+```
 
