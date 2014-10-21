@@ -23,11 +23,15 @@ size_ori = size(ori_str);
 size_out = 4;
 %pij =zeros(size_ori(1),size_ori(2)+size_out);
 
-pij =zeros(size_ori(1),size_out);
+%pij =zeros(size_ori(1),size_out);
 %pij=zeros(10,4);
+%pij =zeros(size_ori(1),2+size_out); % 2 will store long, and lat
+%pij=zeros(10,6); % for test
+pij =zeros(size_ori(1),size_ori(2)+size_out); % will store all orig data
+%pij=zeros(10,10); % for test
 
 for i=1:length(ori_str)
-%for i=1:10
+%for i=1:10  % for test
 	sij = zeros(2);
 	sij(1,1) = ori_str(i,4);
 	sij(2,2) = ori_str(i,5);
@@ -39,10 +43,12 @@ for i=1:length(ori_str)
 	[output] = principal_2d(sij);
 	
 	% get the original data
-	%pij(i,1:size_ori(2)) = ori_str(i,1:size_ori(2)); % layer number	
+	pij(i,1:size_ori(2)) = ori_str(i,1:size_ori(2)); % layer number	
+    %pij(i,1:2) = ori_str(i,2:3); % 2:3 is the long and lat
     % get the principal data
-	%pij(i, (size_ori(2)+1):(size_ori(2)+size_out)) = output;
-    pij(i, 1:size_out) = output;
+	pij(i, (size_ori(2)+1):(size_ori(2)+size_out)) = output;
+    %pij(i, (2+1):(2+size_out)) = output;
+    %pij(i, 1:size_out) = output;
 	
 end
 
@@ -53,10 +59,10 @@ end
 
 %save prin_stress.out pij -ASCII
 
-fileID = fopen('prin_stress.txt','w');
+fileID = fopen('prin_stress1.txt','w');
 %fprintf(fileID,'%6s %12s\n','x','exp(x)');
 % fprintf write in column order!!!, so pij ->pij'
-formatSpec='%4.2f   %4.2f   %3.2f   %4.2f\n';
+formatSpec='%2d %4d  %4d     %4.3f   %4.3f   %4.3f      %4.2f   %4.2f   %3.2f   %4.2f\n';
 fprintf(fileID,formatSpec,pij');
 fclose(fileID);
 

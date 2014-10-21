@@ -31,13 +31,15 @@ awk '{if(($1==1)&& int(($2+5000)*10/100000)==(($2+5000)*10/100000) && int($3*10/
 ###	print $2,$3,int($2*100/5), $2*100/5,  int(($3*1000)/50), $3*1000/50;
 ###	}' $input > bb.txt
 
-psmeca bb.txt  -R -J -Sx0.09i -Ggrey -Ewhite  -O  -W2  -C -V -K>>$psfile
-#psmeca bb.txt  -R -J -Sx0.60 -G0/0/0 -K -O -o-1 -W2 -L -C >>$psfile
+#psmeca bb.txt  -R -J -Sx0.09i -Ggrey -Ewhite  -O  -W2  -C -V -K>>$psfile
 
-awk '{if(int(($1+5000)*10/100000)==(($1+5000)*10/100000) && int($2*10/100000)==($2*10/100000))  print $1/1000,$2/1000,$3,$4,$5,$6,$7,$8,$9,$10,$11/1000,$12/1000+5}' beachball.txt > yang.txt
+awk '{if(int(($1+5000)*10/100000)==(($1+5000)*10/100000) && int($2*10/100000)==($2*10/100000))  print $1/1000,$2/1000,$3,$4,$5,$6,$7,$8,$9,$10,$11/1000,$12/1000}' beachball.txt > yang.txt
 
-psmeca yang.txt -R  -J  -C -O -V  -Sd0.15i/1 -G255/0/0 >> $psfile
+psmeca yang.txt -R  -J  -C -O -V  -Sd0.25i/1 -Gred -Ewhite -K>> $psfile
 
+awk '{if(int(($2+5)*10/100)==(($2+5)*10/100) && int($3*10/100)==($3*10/100))  print $2,$3,$7,$8,-$9}' prin_stress1.txt > prin.txt
+# -A default -A0.03/0.12/0.09
+psvelo prin.txt -A0.01/0.6/0.1 -W0.25p,blue  -R  -J   -O -V  -Sx0.06  -K>> $psfile
 #
 #psbasemap ${range} ${proj} $ticks -X3.5c -Y3.0c -P -V -K > $psfile1
 ##plot the faults
@@ -47,6 +49,7 @@ psmeca yang.txt -R  -J  -C -O -V  -Sd0.15i/1 -G255/0/0 >> $psfile
 #
 #psmeca yang.txt -R  -J  -C -O -V  -Sd0.15i/1 -G255/0/0 >> $psfile1
 
+psxy -J -R -T -O >> $psfile
 ### clean the trash
 rm bb.txt
 
