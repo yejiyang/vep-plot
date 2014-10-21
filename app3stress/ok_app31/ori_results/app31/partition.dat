@@ -1,0 +1,18 @@
+c This file discribes the partition of the whole domain to NUMBLKs subdomains
+c and all the other parameters which will be used to get the common information
+c of your finite element type and Largrange Multipliers
+c  Numblk ------ Number of the subdomains and also the number of slave nodes
+c  Numtyp ------ Maxinum number of the finite element types for each subdomains
+c  nmdof  ------ Number of freedoms for each element node
+c  numtypl ----- Number of the element types of the multipliers
+c  kdgofl  ----- Number of the freedoms for each multiplier
+c  keymt   ----- No use
+c  lgio    ----- 0-- element mate exist, 1-- element mate no exist
+c  t0      ----- Initial clock time
+c  tmax   ------ Maxinum time 
+c  dt     ------ Interval of each time step
+c  Now, input the number of all the parameters as below:
+c  numblk---numtyp---nmdof---numtypl---kdgofl---keymt--lgio
+    24       2        3       1         3         0     0
+c  t0---tmax---dt
+   0.    3.1536e8   15.768e7
