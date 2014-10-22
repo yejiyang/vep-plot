@@ -13,7 +13,7 @@
 clear; clc;
 
 %% read the initial 2-d stress state data
-ori_str = load('./input/input_stress_for_prin_stress');
+ori_str = load('input_stress_for_prin_stress');
 %ori_str = xlsread('./input/input_stress_for_prin_stress.csv');
 
 %% call the function [output] = principal_2d(sij) to calculate 
@@ -62,7 +62,7 @@ end
 fileID = fopen('prin_stress.txt','w');
 %fprintf(fileID,'%6s %12s\n','x','exp(x)');
 % fprintf write in column order!!!, so pij ->pij'
-formatSpec='%2d %4d  %4d     %4.3f   %4.3f   %4.3f      %4.2f   %4.2f   %3.2f   %4.2f\n';
+formatSpec='%2d %4.2f  %4.2f     %4.3f   %4.3f   %4.3f      %4.2f   %4.2f   %3.2f   %4.2f\n';
 fprintf(fileID,formatSpec,pij');
 fclose(fileID);
 

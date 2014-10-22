@@ -450,8 +450,8 @@ c       add by jiyang
 c     close(66)
 
 c1000  format(i9,5f13.5,20es15.5)
-1000  format(i9,2f13.0,3f13.5,20es15.5)
-1001  format(2f13.3,i9,6f8.2,i3,2f13.3)
+1000  format(i9,2f13.2,3f13.2,20es15.3)
+1001  format(2f13.2,i9,6f8.2,i3,2f13.2)
 1010  format(2f15.5)
       return
       end

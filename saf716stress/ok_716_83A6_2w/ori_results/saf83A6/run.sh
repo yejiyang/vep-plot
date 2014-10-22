@@ -15,3 +15,7 @@
 
 ifort -o pp1234 pp1234.f
 ./pp1234
+mv cgrid.m.txt sagrid.83A6_2w.txt
+mv beachball.txt beachball.83A6_2w.txt
+cp sagrid.83A6_2w.txt ../../input/
+cp beachball.83A6_2w.txt ../../input/
