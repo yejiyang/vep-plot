@@ -1,0 +1,172 @@
+!!!set materials
+MPTEMP,1,0   
+MPDATA,EX,1,,10e9   
+MPDATA,PRXY,1,,0.25 
+
+  
+MPDATA,EX,2,,10e9   
+MPDATA,PRXY,2,,0.25 
+
+
+MPDATA,EX,3,,10e9   
+MPDATA,PRXY,3,,0.25 
+
+ 
+MPDATA,EX,4,,10e9   
+MPDATA,PRXY,4,,0.25 
+
+MPDATA,EX,5,,10e9   
+MPDATA,PRXY,5,,0.25 
+
+MPDATA,EX,6,,10e9   
+MPDATA,PRXY,6,,0.25 
+
+MPDATA,EX,7,,10e9   
+MPDATA,PRXY,7,,0.25 
+
+MPDATA,EX,8,,10e9   
+MPDATA,PRXY,8,,0.25 
+
+MPDATA,EX,9,,10e9   
+MPDATA,PRXY,9,,0.25 
+
+MPDATA,EX,10,,10e9   
+MPDATA,PRXY,10,,0.25 
+
+!!! set element type
+ET,1,PLANE42
+
+!!!!MESH START
+!!!!! mesh saf 1,2,3,4
+TYPE,   1    ! element type 1
+MAT,       1  ! mat 1
+REAL,   
+ESYS,       0   
+SECNUM, 
+ESIZE,10000,0,  ! size 10km
+MSHAPE,0,2D   ! 2D
+MSHKEY,0  ! using free meshing
+!*  
+amesh,1,4
+
+!!!!! SFJ
+TYPE,   1    ! element type 1
+MAT,       2  ! mat 2
+REAL,   
+ESYS,       0   
+SECNUM, 
+ESIZE,10000,0,  ! size 10km
+MSHAPE,0,2D   ! 2D
+MSHKEY,0  ! using free meshing
+!*  
+amesh,5
+
+!!!!! mesh  GF1,2
+TYPE,   1    ! element type 1
+MAT,       3  ! mat 3
+REAL,   
+ESYS,       0   
+SECNUM, 
+ESIZE,10000,0,  ! size 10km
+MSHAPE,0,2D   ! 2D
+MSHKEY,0  ! using free meshing
+!*  
+amesh,10	!GF1
+TYPE,   1    ! element type 1
+MAT,       8  ! mat 8 
+REAL,   
+ESYS,       0   
+SECNUM, 
+ESIZE,10000,0,  ! size 10km
+MSHAPE,0,2D   ! 2D
+MSHKEY,0  ! using free meshing
+!*  
+amesh,11	!GF2 in Basin&Range
+
+!!!!! mesh  ESCZ1,2
+TYPE,   1    ! element type 1
+MAT,       4  ! mat 4
+REAL,   
+ESYS,       0   
+SECNUM, 
+ESIZE,10000,0,  ! size 10km
+MSHAPE,0,2D   ! 2D
+MSHKEY,0  ! using free meshing
+!*  
+amesh,12,13
+
+!!!!! mesh  Thrustfault1,2
+TYPE,   1    ! element type 1
+MAT,       5  ! mat 5
+REAL,   
+ESYS,       0   
+SECNUM, 
+ESIZE,10000,0,  ! size 10km
+MSHAPE,0,2D   ! 2D
+MSHKEY,0  ! using free meshing
+!*  
+amesh,14
+TYPE,   1    ! element type 1
+MAT,       6  ! mat 6
+REAL,   
+ESYS,       0   
+SECNUM, 
+ESIZE,10000,0,  ! size 10km
+MSHAPE,0,2D   ! 2D
+MSHKEY,0  ! using free meshing
+!*  
+amesh,15
+
+!!!!! mesh  parallel saf fault, EL1,2,SC1,2
+TYPE,   1    ! element type 1
+MAT,       7  ! mat 7
+REAL,   
+ESYS,       0   
+SECNUM, 
+ESIZE,10000,0,  ! size 10km
+MSHAPE,0,2D   ! 2D
+MSHKEY,0  ! using free meshing
+!*  
+amesh,6,9
+
+!!!!! mesh  Basin & Range  A18&24
+TYPE,   1    ! element type 1
+MAT,       8  ! mat 8
+REAL,   
+ESYS,       0   
+SECNUM, 
+ESIZE,10000,0,  ! size 10km
+MSHAPE,0,2D   ! 2D
+MSHKEY,0  ! using free meshing
+!*     
+amesh,18
+amesh,24
+
+
+!!!!! mesh  big area
+TYPE,   1    ! element type 1
+MAT,       6  ! mat 6
+REAL,   
+ESYS,       0   
+SECNUM, 
+ESIZE,15000,0,  ! size 10km
+MSHAPE,0,2D   ! 2D
+MSHKEY,0  ! using free meshing
+!*  
+amesh,16,17
+
+TYPE,   1    ! element type 1
+MAT,       6  ! mat 6
+REAL,   
+ESYS,       0   
+SECNUM, 
+ESIZE,15000,0,  ! size 10km
+MSHAPE,0,2D   ! 2D
+MSHKEY,0  ! using free meshing
+!*  
+amesh,19,23
+/NUMBER,1   ! only showing colors no numbering
+/PNUM,MAT,1 ! show depend on the different mat
+/REPLOT 
+eplot ! show the element
+!!!!MESH end 

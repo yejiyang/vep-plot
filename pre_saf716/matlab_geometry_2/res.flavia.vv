@@ -1,0 +1,480 @@
+BeginZE C:/Users/jiyang/Dropbox/SAF/model/matlab_geometry_2/res.flavia.vv
+   x -858914.3125 918914.3125
+   y 399100.34375 -449100.34375
+   z -1297301 1247301
+   e 424100.34375
+   v 0 0 0
+   r 1
+   m 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1
+   c 30000 -25000 25000
+   pd 0
+   pno 0
+   pfo 0
+   pf 4
+   pv 0
+   NowUse 2
+   DrawingType 3
+   LightVector 90 90 150 0
+   OGLShadow(UseShadows) 0
+   OGLShadow(RenderMode) RenderNice
+   OGLShadow(ShadowBias) -0.002
+   OGLShadow(AmbientShadows) 1
+   OGLShadow(UseFBO) 0
+   OGLShadow(FBOSize) 0
+   OGLShadow(DimmedLightFactor) 0.02
+   OGLStereo(UseStereo) 0
+   OGLStereo(RelativeEyeDistance) 1
+   OGLStereo(FlipEyes) 0
+   OGLStereo(StereoMode) AnaglyphColors
+   OGLStereo(EyeDistance) 0.075
+   OGLStereo(LeftEyeDistance) 1 0 0 1
+   OGLStereo(RightEyeDistance) 0 1 1 1
+EndZE C:/Users/jiyang/Dropbox/SAF/model/matlab_geometry_2/res.flavia.vv
+
+BeginMirror
+   Mirror 0 Angle 0.0 AngleFake -15.0 SizeFactor 2.0 HeightOffset 0.25 Color #d9e5f24d Backlight Off EdgeStyle No Type Scene DrawMode Mirror
+EndMirror
+
+
+BeginPostState
+BeginSingleMesh
+  Num meshes: 27
+  Num sets: 0
+  Num cuts: 0
+  Mesh: 0
+  State: On
+    Name: "Whole 21"
+    IdSet: 21
+    Color Type: 0
+    Color Ambient: 0.333333 0.166667 0 0.5
+    Color Diffuse: 1 0.5 0 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 0
+  Mesh: 1
+  State: On
+    Name: "Whole 22"
+    IdSet: 22
+    Color Type: 0
+    Color Ambient: 0 0 0.333333 0.5
+    Color Diffuse: 0 0 1 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 1
+  Mesh: 2
+  State: On
+    Name: "Whole 23"
+    IdSet: 23
+    Color Type: 0
+    Color Ambient: 0.166667 0.333333 0 0.5
+    Color Diffuse: 0.5 1 0 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 2
+  Mesh: 3
+  State: On
+    Name: "Whole 28"
+    IdSet: 28
+    Color Type: 0
+    Color Ambient: 0.333333 0.333333 0 0.5
+    Color Diffuse: 1 1 0 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 3
+  Mesh: 4
+  State: On
+    Name: "Whole 24"
+    IdSet: 24
+    Color Type: 0
+    Color Ambient: 0.333333 0 0.333333 0.5
+    Color Diffuse: 1 0 1 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 4
+  Mesh: 5
+  State: On
+    Name: "Whole 25"
+    IdSet: 25
+    Color Type: 0
+    Color Ambient: 0 0.333333 0.166667 0.5
+    Color Diffuse: 0 1 0.5 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 5
+  Mesh: 6
+  State: On
+    Name: "Whole 26"
+    IdSet: 26
+    Color Type: 0
+    Color Ambient: 0.333333 0 0 0.5
+    Color Diffuse: 1 0 0 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 6
+  Mesh: 7
+  State: On
+    Name: "Whole 27"
+    IdSet: 27
+    Color Type: 0
+    Color Ambient: 0 0.166667 0.333333 0.5
+    Color Diffuse: 0 0.5 1 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 7
+  Mesh: 8
+  State: On
+    Name: "Whole 29"
+    IdSet: 29
+    Color Type: 0
+    Color Ambient: 0.166667 0 0.333333 0.5
+    Color Diffuse: 0.5 0 1 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 8
+  Mesh: 9
+  State: On
+    Name: "Whole 11"
+    IdSet: 11
+    Color Type: 0
+    Color Ambient: 0.1 0.1 0.2 0.5
+    Color Diffuse: 0.3 0.3 0.5 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 9
+  Mesh: 10
+  State: On
+    Name: "Whole 12"
+    IdSet: 12
+    Color Type: 0
+    Color Ambient: 0.3 0.1 0.1 0.5
+    Color Diffuse: 1 0.3 0.3 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 10
+  Mesh: 11
+  State: On
+    Name: "Whole 13"
+    IdSet: 13
+    Color Type: 0
+    Color Ambient: 0.1 0.3 0.1 0.5
+    Color Diffuse: 0.3 1 0.3 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 11
+  Mesh: 12
+  State: On
+    Name: "Whole 18"
+    IdSet: 18
+    Color Type: 0
+    Color Ambient: 0 0.333333 0 0.5
+    Color Diffuse: 0 1 0 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 12
+  Mesh: 13
+  State: On
+    Name: "Whole 14"
+    IdSet: 14
+    Color Type: 0
+    Color Ambient: 0.1 0.1 0.3 0.5
+    Color Diffuse: 0.3 0.3 1 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 13
+  Mesh: 14
+  State: On
+    Name: "Whole 15"
+    IdSet: 15
+    Color Type: 0
+    Color Ambient: 0.1 0.2 0.1 0.5
+    Color Diffuse: 0.3 0.5 0.3 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 14
+  Mesh: 15
+  State: On
+    Name: "Whole 16"
+    IdSet: 16
+    Color Type: 0
+    Color Ambient: 0.3 0 0 0.5
+    Color Diffuse: 1 0 0 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 15
+  Mesh: 16
+  State: On
+    Name: "Whole 17"
+    IdSet: 17
+    Color Type: 0
+    Color Ambient: 0.3 0.3 0 0.5
+    Color Diffuse: 1 1 0 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 16
+  Mesh: 17
+  State: On
+    Name: "Whole 19"
+    IdSet: 19
+    Color Type: 0
+    Color Ambient: 0.333333 0 0.166667 0.5
+    Color Diffuse: 1 0 0.5 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 17
+  Mesh: 18
+  State: On
+    Name: "Whole 1"
+    IdSet: 1
+    Color Type: 0
+    Color Ambient: 0.2 0.2 0.2 0.5
+    Color Diffuse: 0.6 0.6 0.6 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 18
+  Mesh: 19
+  State: On
+    Name: "Whole 2"
+    IdSet: 2
+    Color Type: 0
+    Color Ambient: 0 0 0.3 0.5
+    Color Diffuse: 0 0 1 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 19
+  Mesh: 20
+  State: On
+    Name: "Whole 3"
+    IdSet: 3
+    Color Type: 0
+    Color Ambient: 0.3 0 0.3 0.5
+    Color Diffuse: 1 0 1 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 20
+  Mesh: 21
+  State: On
+    Name: "Whole 8"
+    IdSet: 8
+    Color Type: 0
+    Color Ambient: 0.2 0.1 0.1 0.5
+    Color Diffuse: 0.7 0.2 0.4 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 21
+  Mesh: 22
+  State: On
+    Name: "Whole 4"
+    IdSet: 4
+    Color Type: 0
+    Color Ambient: 0 0.3 0.3 0.5
+    Color Diffuse: 0 1 1 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 22
+  Mesh: 23
+  State: On
+    Name: "Whole 5"
+    IdSet: 5
+    Color Type: 0
+    Color Ambient: 0.22 0 0.05 0.5
+    Color Diffuse: 0.65 0 0.13 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 23
+  Mesh: 24
+  State: On
+    Name: "Whole 6"
+    IdSet: 6
+    Color Type: 0
+    Color Ambient: 0 0.3 0 0.5
+    Color Diffuse: 0 1 0 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 24
+  Mesh: 25
+  State: On
+    Name: "Whole 7"
+    IdSet: 7
+    Color Type: 0
+    Color Ambient: 0.3 0.2 0 0.5
+    Color Diffuse: 0.6 0.4 0 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 25
+  Mesh: 26
+  State: On
+    Name: "Whole 9"
+    IdSet: 9
+    Color Type: 0
+    Color Ambient: 0.2 0.1 0.1 0.5
+    Color Diffuse: 0.5 0.3 0.3 0.5
+    Color Specular: 1 1 1 0.5
+    Color Shininess: 0.5
+    Property Massive: 1
+    Property Transparent: 0
+    Property Style: 13
+    Property Edge Width: 1
+    Property Vector Filter Factor: 0
+    Property Stream Arrow: 0
+  EndMesh: 26
+EndSingleMesh
+  Post_Prefs_Vector_Size: 0 32 32 32
+  ResultView: {Id 7} {No results} {} {} {} {} 4 0
+EndPostState
+

@@ -1,0 +1,101 @@
+k,,-2.2e5,-3.5e5
+k,,-2.2e5,3e5
+k,,2.8e5,-3.5e5
+k,,2.8e5,3e5
+l,56,57
+l,57,59
+l,59,58
+l,58,56
+
+/pnum,line,1
+
+FLST,2,4,4,orde,2
+FITEM,2,37
+FITEM,2,-40
+LDELE,P51x,,,1
+
+LEXTND,14,18,1e5,0
+LEXTND, 9,12,1e5,0
+
+LSBL, 23,44,,delete,keep
+LSBL, 34,44,,delete,keep
+LSBL, 32,44,,delete,keep
+LSBL, 22,43,,delete,keep
+LSBL, 14,46,,delete,keep
+LSBL,  9,46,,delete,keep
+
+FLST,2,6,4,orde,5
+FITEM,2,37
+FITEM,2,39
+FITEM,2,-40
+FITEM,2,47
+FITEM,2,-49
+LDELE,P51X,,,1
+
+FLST,2,2,4,ORDE,2   
+FITEM,2,8   
+FITEM,2,30  
+LDELE,P51X, , ,1
+LPLOT   
+LSTR,       9,      11  
+LSTR,      37,      11  
+
+FLST,2,3,4,ORDE,3   
+FITEM,2,6   
+FITEM,2,18  
+FITEM,2,26  
+LDELE,P51X, , ,1
+LPLOT   
+LSTR,      33,      34  
+LSTR,       8,      34  
+LDELE,      10, , ,1
+LPLOT   
+LSTR,      25,      34  
+LSTR,      25,      14  
+LDELE,      15, , ,1
+LPLOT   
+LSTR,      26,      20  
+LDELE,      42, , ,1
+LSTR,      54,      35  
+LPLOT   
+
+LDELE,       1, , ,1
+LPLOT   
+LSTR,      32,       2  
+
+LSBL, 33,4,,delete,keep 
+LSBL, 31,4,,delete,keep 
+FLST,2,3,4,ORDE,3   
+FITEM,2,4   
+FITEM,2,33  
+FITEM,2,37  
+LDELE,P51X, , ,1
+LPLOT   
+LSTR,       1,       7
+
+FLST,2,2,4,ORDE,2   
+FITEM,2,36  
+FITEM,2,41  
+LDELE,P51X, , ,1
+LPLOT   
+LSTR,       4,       1  
+LSTR,      54,       1  
+LSTR,       7,      46  
+LSTR,       7,       6  
+LDELE,       5, , ,1
+LPLOT  
+
+/PNUM,KP,1  
+/PNUM,LINE,0
+/REPLOT 
+
+LEXTND,35,45,1e5,0
+
+LSBL, 35,28,,delete,keep 
+
+FLST,2,2,4,ORDE,2   
+FITEM,2,5   
+FITEM,2,28  
+LDELE,P51X, , ,1
+LSTR,      35,       5  
+LSTR,       5,      36  

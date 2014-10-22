@@ -1,0 +1,75 @@
+/OUTPUT
+/COM
+/OUT,saf627,msh
+!/COM,Mesh "Whole" Dimension 3  Elemtype Hexahedra Nnode 8
+/COM,MESH dimension 3 ElemType Quadrilateral Nnode 4
+/COM,Coordinates                                      
+/NOPR
+!!!!!!!!!!!!!!!!!!!STORE ALL THE NODES, INCLUDES NODE_NUMBER, NODE_X, NODE_Y!!!!!!!!!!!!!!!!!!!!
+*GET, Nnod, NODE, 0, COUNT ! GET THE TOTAL NUMBER OF THE SELECTED NODES
+*DIM, Xy, ARRAY, NNOD, 4   ! STORE ALL THE NODES, INCLUDES NODE_NUMBER, NODE_X, NODE_Y
+*GET, Nd, NODE, 0, NUM, MIN	! GET THE MIMIUM NUMBER OF NODE
+*DO, i, 1, NNOD, 1				 ! STORE ALL THE NODES, INCLUDES NODE_NUMBER, NODE_X, NODE_Y
+	Xy(i,1) = Nd 	! Nd   
+	Xy(i,2) = NX(Nd) 	! GET THE X COORDINATE OF Nd
+	Xy(i,3) = NY(Nd) 	! GET THE Y COORDINATE OF Nd
+	Xy(i,4) = NZ(Nd) 	! GET THE Y COORDINATE OF Nd
+	Nd = NDNEXT (Nd)	! GET THE NEXT NODE NUMBER
+*ENDDO
+/GO
+! WRITE the node TO FILE
+*VWRITE, Xy(1,1), Xy(1,2), Xy(1,3), Xy(1,4)
+(F8.0,TL1,'		',F12.2,F12.2,F10.2)
+/COM,End Coordinates
+!
+!
+/NOPR
+!!!!!!!!!!!!!!!!!!!!STORE ALL THE ELEMENTS, INCLUDES ELEMENT_NUMBER, ELEMENT_NODE_NUM, ELEMENT_MAT!!!!!!!!!!!!!!!!!!!!
+*GET, Nelm, ELEM, 0, COUNT	! GET THE TOTAL NUMBER OF THE SELECTED ELEMENT
+*DIM, Elems, ARRAY, NELM, 4	! STORE THE ELEMENT_NUMBER, ELEMENT_MAT, ELEMENT_TYPE, ELEMENT_REAL
+*DIM, Enode, ARRAY, NELM, 4 ! STORE THE ELEMENT_NODE_LIST, !!!!!!!!!THE 4-4NODES, 3-3NODES
+*GET, El, ELEM, 0, NUM, MIN ! GET THE MIM NUMBER OF ELEMENTS
+*DO, i, 1, NELM, 1
+	Elems(i,1) = El
+	*GET, Emat0, ELEM, EL, ATTR, MAT ! GET THE ELEMENT EL'S MAT
+	*GET, Etype0, ELEM, EL, ATTR, TYPE ! GET THE ELEMENT EL'S TYPE
+	*GET, Ereal, ELEM, EL, ATTR, REAL ! GET THE ELEMENT EL'S REAL
+	Elems(i,2) = Emat0
+	Elems(i,3) = Etype0
+	Elems(i,4) = Ereal
+	*DO, J, 1, 4   !!!!!!!THE 4-4NODES, 3-3NODES
+		Enode(i,J)= NELEM(El,J)
+	*ENDDO
+	El=ELNEXT(El)
+*ENDDO
+/GO
+!    
+/COM
+/COM,Elements
+! WRITE the element TO FILE
+*VWRITE, Elems(1,1), Enode(1,1), Enode(1,2), Enode(1,3), Enode(1,4),Elems(1,2)
+(F10.0,TL1,'		',F10.0,TL1,'		',F10.0,TL1,'		',F10.0,TL1,'		',F10.0,TL1,'		',F6.0,TL1,'		')
+!
+!!!!!! OUTPUT FORMAT, USING FORTRAN FORMAT !!!!!!!!!!!!
+!*VWRITE, 999, 888, 666
+!(F10.2,F10.2,F10.2)
+!(1X,'   ',F10.2,'  ',F10.2,'   ',F10.2)
+!(1X,A8,A8,'   ',F10.2,'  ',F10.2,'   ',1F8.3)
+!!!!!!!OUTPUTFORMAT!!!!!!!!!!!!!!
+/COM,End Elements
+/OUT
+FINISH  
+!
+!  write the input_datapre.saf627 file
+!
+/OUTPUT
+/COM                                       
+/OUT,input_datapre,saf627   ! saf627 should be change 
+*VWRITE, Nnod, NELM 
+(F10.0,TL1,'		',F10.0,TL1,'		')
+/COM,saf627.msh
+/COM,# for saf627.msh
+/COM,# total nodes, total elements
+/COM,# input file name, saf627.msh
+/OUT
+FINISH  

@@ -1,0 +1,10 @@
+function  showfaults( faultsmatrix )
+%SHOWFAULTS Summary of this function goes here
+%   Detailed explanation goes here
+faultsmatrix;
+k=length(faultmatrix);
+% while k
+%     
+%     k=k-1;
+ end
+
