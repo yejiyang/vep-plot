@@ -62,7 +62,7 @@ end
 fileID = fopen('prin_stress.txt','w');
 %fprintf(fileID,'%6s %12s\n','x','exp(x)');
 % fprintf write in column order!!!, so pij ->pij'
-formatSpec='%2d %4.2f  %4.2f     %4.3f   %4.3f   %4.3f      %4.2f   %4.2f   %3.2f   %4.2f\n';
+formatSpec='%2d %4d  %4d     %4.3f   %4.3f   %4.3f      %4.2f   %4.2f   %3.2f   %4.2f\n';
 fprintf(fileID,formatSpec,pij');
 fclose(fileID);
 

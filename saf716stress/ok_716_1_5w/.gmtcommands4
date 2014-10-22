@@ -1,9 +1,11 @@
 # GMT common arguments shelf
--B2f1eSWn
+-B50f25eSWn
 -JM18.39c
 -JX6i/8i
--R-121.6/-113.2/31.4/38.1
--X1.5c
--Y2c
--jM18.39c
+-R-220/280/-350/300
+-X3.0c
+-Y6c
+-jX6i/8i
+EOF
+
 EOF

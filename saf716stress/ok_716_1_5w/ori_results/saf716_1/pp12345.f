@@ -208,21 +208,22 @@ c      pi==3.1415926==4*datan(1.d0)
 !      a22=cos(alpha)
 !---------replace by ------
 
-      xleft=-122.0d0
-      xright=-112.0d0
-      ybottom=31.0d0
-      ytop=38.3d0
+      xleft=-2.2d5
+      xright=2.8d5
+      ybottom=-3.5d5
+      ytop=3.0d5
 
-      step=0.05d0
-c      step=0.5d0
+      step=5.0d3
       lon=xleft-step
       lat=ybottom-step
 
 
-      open(12,file='cgrid.m.txt',status='unknown',form='formatted')
+      open(12,file='cgrid.meter.m.txt',status='unknown',
+     *   form='formatted')
 c      open(66,file='ctest.txt',status='unknown',form='formatted')
 c       add by jiyang
-      open(122,file='beachball.txt',status='unknown',form='formatted')
+      open(122,file='beachball.meter.txt',status='unknown',
+     *   form='formatted')
 
       do while ( lon .le. xright ) 
       lon=lon+step
@@ -243,7 +244,11 @@ c       add by jiyang
 !      yyy0=a21*cx+a22*cy
 !      x3=xxx0
 !      y3=yyy0      
-      
+! ----replace by----
+
+      x3=lon
+      y3=lat      
+
       do k=1,nqu2
       x1=coor(1,nqudr(1,k))
       y1=coor(2,nqudr(1,k))
@@ -298,8 +303,10 @@ c
        zzd(3) = u0(1,nqudr(3,k)+np2*(nlayer-m))
        zzd(4) = u0(1,nqudr(4,k)+np2*(nlayer-m))
       
-       xxd0 = xxx0
-       yyd0 = yyy0
+!       xxd0 = xxx0
+!       yyd0 = yyy0
+       xxd0 = x3
+       yyd0 = y3
        call locate_qudr(xxd,yyd,xxd0,yyd0,rr,ss)
        call inter_quadri(rr,ss,zzd,top)       
        u01= top*1000.d0
@@ -465,8 +472,10 @@ c       add by jiyang
 c     close(66)
 
 c1000  format(i9,5f13.5,20es15.5)
-1000  format(i9,2f13.2,3f13.2,20es15.3)
-1001  format(2f13.2,i9,6f8.2,i3,2f13.2)
+!1000  format(i9,2f13.2,3f13.2,20es15.3)
+1000  format(i9,2f13.0,3f13.2,20es15.3)
+!1001  format(2f13.2,i9,6f8.2,i3,2f13.2)
+1001  format(2f13.0,i9,6f8.2,i3,2f13.0)
 1010  format(2f15.5)
       return
       end

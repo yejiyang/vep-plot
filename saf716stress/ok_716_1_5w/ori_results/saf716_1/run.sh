@@ -14,9 +14,18 @@
 #cp sagrid.31.txt ../../input/
 #cp beachball.31.txt ../../input/
 
-ifort -o pp1234 pp1234.f
-./pp1234
-mv cgrid.m.txt sagrid.1_5w.txt
-mv beachball.txt beachball.1_5w.txt
-cp sagrid.1_5w.txt ../../input/
-cp beachball.1_5w.txt ../../input/
+### for 716 degree
+#ifort -o pp1234 pp1234.f
+#./pp1234
+#mv cgrid.m.txt sagrid.1_5w.txt
+#mv beachball.txt beachball.1_5w.txt
+#cp sagrid.1_5w.txt ../../input/
+#cp beachball.1_5w.txt ../../input/
+
+# for 716 meter
+ifort -o pp12345 pp12345.f
+./pp12345
+mv cgrid.meter.m.txt sagrid.meter.1_5w.txt
+mv beachball.meter.txt beachball.meter.1_5w.txt
+cp sagrid.meter.1_5w.txt ../../input/
+cp beachball.meter.1_5w.txt ../../input/
