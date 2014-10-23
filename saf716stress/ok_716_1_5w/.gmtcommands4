@@ -1,5 +1,5 @@
 # GMT common arguments shelf
--B50f25eSWn
+-B50f25eSWn:.Only_SAF_0_km:
 -JM18.39c
 -JX6i/8i
 -R-220/280/-350/300
@@ -8,4 +8,3 @@
 -jX6i/8i
 EOF
 
-EOF
