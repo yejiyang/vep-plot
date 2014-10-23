@@ -4,11 +4,11 @@ close all;
 
 
 %% load the fault data in deg format
-fault_deg = load('saf.deg');
+fault_deg = load('nv.deg');
 %longlat=[-121.6,-113.2,-113.2,-121.6,-121.6; 31.4,31.4,38.1,38.1,31.4]';
 %fault_deg=longlat;      
 % show it
-plot(fault_deg(:,1),fault_deg(:,2));
+%plot(fault_deg(:,1),fault_deg(:,2));
 %
 
 
@@ -25,9 +25,9 @@ for i=1:length(fault_deg)
 end
 
 % show the faults in the figure
-figure(2)
-hold on
-plot(fault_deg(:,1),fault_deg(:,2),'r*-');
+%figure(2)
+%hold on
+%plot(fault_deg(:,1),fault_deg(:,2),'r*-');
 %
 
 %% %%%%%%% rotate 45 degrees clockwise, 320 anticlockwise
@@ -44,15 +44,15 @@ end
 
 % show the faults in the figure
 %figure(3)
-plot(fault_deg(:,1),fault_deg(:,2),'*-');
-hold off
+%plot(fault_deg(:,1),fault_deg(:,2),'*-');
+%hold off
 %
 
 %% %%%%%%%% output for gmt
 %  STEP4
 
-fid_ans_out=fopen('saf.km','w');
-fprintf(fid_ans_out,'%s\n','>');
+fid_ans_out=fopen('nv.km','w');
+fprintf(fid_ans_out,'%s\n','>nv.km');
 fprintf(fid_ans_out,'%3.2f  %3.2f\n',fault_deg'/1000);
 fclose(fid_ans_out);
 
