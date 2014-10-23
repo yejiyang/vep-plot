@@ -4,14 +4,14 @@
 # this file includes the data to plot beachball, calculated from Yang's method.
 # the original file is from '/home/jiyang/opensource/vep-plot/app3stress/ori_results/app32', calculated by 'p12345.f'
 
-m=1  
-input=./input/sagrid.meter.1_5w.txt
-inputybb=./input/beachball.meter.1_5w.txt
+m=4  
+input=./input/sagrid.meter.83A6_4w.txt
+inputybb=./input/beachball.meter.83A6_4w.txt
 inputprinstr=./input/prin_stress.txt
 #input=./ores.$1/sagrid.$1.txt
 #prepare the data
 #title=$1.beachball.vep
-title=1_5w.$m.beachball.vep
+title=83A6_4w.$m.beachball.vep
 psfile=${title}.ps
 
 #range="-R-121.6/-113.2/31.4/38.1"
