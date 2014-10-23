@@ -4,7 +4,7 @@
 # this file includes the data to plot beachball, calculated from Yang's method.
 # the original file is from '/home/jiyang/opensource/vep-plot/app3stress/ori_results/app32', calculated by 'p12345.f'
 
-m=1  
+m=6  
 input=./input/sagrid.meter.1_5w.txt
 inputybb=./input/beachball.meter.1_5w.txt
 inputprinstr=./input/prin_stress.txt
@@ -21,7 +21,7 @@ range="-R-220/280/-350/300"
 proj="-JX6i/8i"
 #ticks="-B:."Only SAF, 15km Depth":50f25eSWn"
 let depth=5\*$m-5
-title1=Only_SAF_${depth}_km
+title1=Only_SAF_${depth}_km_depth
 ticks="-B50f25eSWn:."$title1":"
 V="-V"
 #V=""

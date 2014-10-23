@@ -4,7 +4,7 @@
 # this file includes the data to plot beachball, calculated from Yang's method.
 # the original file is from '/home/jiyang/opensource/vep-plot/app3stress/ori_results/app32', calculated by 'p12345.f'
 
-m=4  
+m=6  
 input=./input/sagrid.meter.83A6_4w.txt
 inputybb=./input/beachball.meter.83A6_4w.txt
 inputprinstr=./input/prin_stress.txt
@@ -21,7 +21,7 @@ range="-R-220/280/-350/300"
 proj="-JX6i/8i"
 #ticks="-B:."Only SAF, 15km Depth":50f25eSWn"
 let depth=5\*$m-5
-title1=All_Faults_${depth}_km
+title1=All_Faults_${depth}_km_depth
 ticks="-B50f25eSWn:."$title1":"
 V="-V"
 #V=""
@@ -31,6 +31,12 @@ para_path=./para/
 psbasemap ${range} ${proj} $ticks -X3.0c -Y6c -P $V -K > ${psfile}
 #plot the faults
 psxy ./para/saf.km  $proj $range -W3,black -m -O -V -K>>$psfile
+psxy ./para/gf.km  $proj $range -W3,black -m -O -V -K>>$psfile
+psxy ./para/sjf.km  $proj $range -W3,black -m -O -V -K>>$psfile
+psxy ./para/pf.km  $proj $range -W3,black -m -O -V -K>>$psfile
+psxy ./para/tf.km  $proj $range -W3,black -m -O -V -K>>$psfile
+psxy ./para/ecsz.km  $proj $range -W3,black,- -m -O -V -K>>$psfile
+psxy ./para/nv.km  $proj $range -W3,black,- -m -O -V -K>>$psfile
 #psxy ${para_path}saf627bddegree.txt $proj $range -W4,grey,- -m -O $V -K>>$psfile
 
 
