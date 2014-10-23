@@ -13,7 +13,8 @@ psfile=${title}.ps
 
 range="-R75/225/100/300"
 proj="-JX6i/8i"
-ticks="-B25f25eSWn"
+title2=1saf_vs_3sjf
+ticks="-B25f25eSWn:.$title2:"
 
 
 psbasemap ${range} ${proj} $ticks -X3.5c -Y3.0c -P -V -K > ${psfile}
@@ -48,6 +49,7 @@ psxy -J -R -T -O >> $psfile
 ### clean the trash
 rm bb.txt prin.txt yang.txt
 
-gnome-open ${title}.ps
+#gnome-open ${title}.ps
+open ${title}.ps
 #gnome-open $psfile1
 #mv *.ps ./output
