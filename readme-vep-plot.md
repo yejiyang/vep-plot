@@ -250,3 +250,23 @@ psmeca cmt1 -R236/250/33/43 -Jm0.40i  -C -O -K -Sd0.15i/1 -G255/0/0 >> cmt1.ps
     gnome-open $psfile
 
 ```
+
+### test
+
+1. Level one heading
+    - a bullet point
+    * also a bullet point
+    + yet a third way of writing a bullet point
+    - pick your poison!
+
+#. With numbered lists Pandoc will figure out the correct numbering for you
+    - Isn't that cool?
+
+#. You can mix math inline $x^2 + y^2 = z^2$ or in display mode:
+    $$
+    \frac{a}{b} = \frac{c}{d} + \frac{e}{f}
+    $$
+
+#.  You can mix styles
+    a) sublist with alphabetical
+    b) nice, eh?
